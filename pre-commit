@@ -27,6 +27,8 @@ do
                     --fail-on-warnings \
                     --no-80chars-check \
                     --no-double_quoted_strings-check \
+                    --no-documentation-check \
+                    --no-class_parameter_defaults-check \
                     $indexfile
                 ;;
             *.erb )
