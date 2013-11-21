@@ -39,8 +39,8 @@ while read oldrev newrev refname; do
                     --no-arrow_alignment-check \
                     $tmpmodule > $tmperror
                 rc=$?
-                if [[ $rc != 0 ]]; then
-                    if [[ $warned = 0 ]]; then
+                if [[ $rc -ne 0 ]]; then
+                    if [[ $warned -eq 0 ]]; then
                         echo -e "${yellow}Please follow the puppet module styleguide (http://docs.puppetlabs.com/guides/style_guide.html).${reset}"
                         echo -e "${red}The following ERROR/WARNING messages are informational only. The commit has been accepted. In the future, these will cause your commit to be refused.${reset}"
                         warned=1
